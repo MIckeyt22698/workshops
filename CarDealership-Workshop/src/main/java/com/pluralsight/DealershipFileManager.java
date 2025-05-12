@@ -7,9 +7,9 @@ import java.io.IOException;
 public class DealershipFileManager {
 
     public Dealership getDealership() {
-        Dealership dealership = new Dealership("Main Street Motors", "123 Main St", "555-1234");
+        Dealership dealership = new Dealership("Mickeys Motors", "42 Wallaby Way", "555-1234");
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(""))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("inventory.csv"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] fields = line.split(",");
