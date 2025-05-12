@@ -48,7 +48,7 @@ public class Dealership {
         return null;
     }
 
-    public void removeVehicle(Vehicle vehicle) {
-        // To be implemented
-    }
+//    public void removeVehicle(Vehicle vehicle) {
+//
+//    }
 }
