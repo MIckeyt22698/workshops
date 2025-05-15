@@ -1,4 +1,10 @@
-package com.pluralsight;
+package com.pluralsight.ui;
+
+import com.pluralsight.contracts.LeaseContract;
+import com.pluralsight.contracts.SalesContract;
+import com.pluralsight.dealership.Dealership;
+import com.pluralsight.dealership.DealershipFileManager;
+import com.pluralsight.dealership.Vehicle;
 
 import java.util.List;
 import java.util.Scanner;
