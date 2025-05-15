@@ -43,9 +43,13 @@ public class UserInterface {
                     processRemoveVehicleRequest();
                     break;
                 case "9":
+                    processGetByMileageRequest();
+                    break;
+                case "10":
                     System.out.println("Exiting program...");
                     running = false;
                     break;
+
                 default:
                     System.out.println("Invalid input. Please try again.");
             }
@@ -177,13 +181,13 @@ public class UserInterface {
             System.out.print("Enter color: ");
             String color = scanner.nextLine();
 
-            System.out.print("Enter odometer reading: ");
-            int odometer = Integer.parseInt(scanner.nextLine());
+            System.out.print("Enter Milage reading: ");
+            int mileage = Integer.parseInt(scanner.nextLine());
 
             System.out.print("Enter price: ");
             double price = Double.parseDouble(scanner.nextLine());
 
-            Vehicle newVehicle = new Vehicle(vin, year, make, model, vehicleType, color, odometer, price);
+            Vehicle newVehicle = new Vehicle(vin, year, make, model, vehicleType, color, mileage, price);
             dealership.addVehicle(newVehicle);
 
             System.out.println("Vehicle added successfully.");
@@ -219,4 +223,20 @@ public class UserInterface {
             System.out.println("Invalid VIN input. Please enter a number.");
         }
     }
+    public void processGetByMileageRequest() {
+        Scanner scanner = new Scanner(System.in);
+
+        try {
+            System.out.print("Enter minimum mileage: ");
+            int min = Integer.parseInt(scanner.nextLine());
+
+            System.out.print("Enter maximum mileage: ");
+            int max = Integer.parseInt(scanner.nextLine());
+
+            List<Vehicle> results = dealership.getVehiclesByMileage(min, max);
+            displayVehicles(results);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter numeric values.");
+        }
+}
 }

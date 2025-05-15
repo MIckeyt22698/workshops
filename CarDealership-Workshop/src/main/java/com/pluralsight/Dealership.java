@@ -48,20 +48,23 @@ public class Dealership {
         return null;
     }
 
-    public void removeVehicle(String vin) {
-        for (Vehicle vehicle : inventory) {
-            if (vehicle.getVin().equals(vin)) {
-                vehicleToRemove = vehicle;
-                break;
-            }
-        }
-
-        // If the vehicle is found, remove it
-        if (vehicleToRemove != null) {
-            inventory.remove(vehicleToRemove);
-            System.out.println("Vehicle with VIN " + vin + " removed successfully.");
-        } else {
-            System.out.println("Vehicle with VIN " + vin + " not found.");
-        }
-    }
+//    public void removeVehicle(String vin) {
+//        for (Vehicle vehicle : inventory) {
+//            if (vehicle.getVin() == vin) {
+//                vehicleToRemove = vehicle;
+//                break;
+//        }
+//
+//        // If the vehicle is found, remove it
+//        if (vehicleToRemove != null) {
+//            inventory.remove(vehicleToRemove);
+//            System.out.println("Vehicle with VIN " + vin + " removed successfully.");
+//        } else {
+//            System.out.println("Vehicle with VIN " + vin + " not found.");
+//        }
+//    }
+//}
+public void removeVehicle(Vehicle vehicle) {
+    inventory.remove(vehicle);
+}
 }

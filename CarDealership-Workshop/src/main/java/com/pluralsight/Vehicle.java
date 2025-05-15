@@ -7,18 +7,18 @@ public class Vehicle {
     private String model;
     private String vehicleType;
     private String color;
-    private int odometer;
+    private int mileage;
     private double price;
 
     public Vehicle(int vin, int year, String make, String model,
-                   String vehicleType, String color, int odometer, double price) {
+                   String vehicleType, String color, int mileage, double price) {
         this.vin = vin;
         this.year = year;
         this.make = make;
         this.model = model;
         this.vehicleType = vehicleType;
         this.color = color;
-        this.odometer = odometer;
+        this.mileage = mileage;
         this.price = price;
     }
 
@@ -28,6 +28,6 @@ public class Vehicle {
     public String getModel() { return model; }
     public String getVehicleType() { return vehicleType; }
     public String getColor() { return color; }
-    public int getOdometer() { return odometer; }
+    public int getMileage() { return mileage; }
     public double getPrice() { return price; }
 }
